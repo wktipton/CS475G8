@@ -28,5 +28,7 @@ Talk about the results of the project here
 Place any references here
 
 ## Running code
+make <filename>.txt
+make list --> Prints out all available tests
 python main.py tests/"name of file"
 python main.py tests/"name of file" --graph
