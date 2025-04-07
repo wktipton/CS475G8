@@ -1,5 +1,5 @@
 states: 1,2,3,4,5
-alphabet: a,b
+language: a,b
 start_state: 1
 accept_states: 5
 transitions:

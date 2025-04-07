@@ -7,7 +7,7 @@ def load_nfa_from_file(filename):
         lines = [line.strip() for line in f if line.strip()]
 
     states = set()
-    alphabet = set()
+    language = set()
     transitions = {}
     start_state = ''
     accept_states = set()
@@ -16,8 +16,8 @@ def load_nfa_from_file(filename):
     for line in lines:
         if line.startswith('states:'):
             states = set(s.strip() for s in line.replace('states:', '').split(','))
-        elif line.startswith('alphabet:'):
-            alphabet = set(s.strip() for s in line.replace('alphabet:', '').split(','))
+        elif line.startswith('language:'):
+            language = set(s.strip() for s in line.replace('language:', '').split(','))
         elif line.startswith('start_state:'):
             start_state = line.replace('start_state:', '').strip()
         elif line.startswith('accept_states:'):
@@ -34,11 +34,11 @@ def load_nfa_from_file(filename):
     '''
     print("DEBUG - Parsed NFA:")
     print("States:", states)
-    print("Alphabet:", alphabet)
+    print("Alphabet:", language)
     print("Start state:", start_state)
     print("Accept states:", accept_states)
     print("Transitions:", transitions)
     '''
 
 
-    return NFA(states, alphabet, transitions, start_state, accept_states)
+    return NFA(states, language, transitions, start_state, accept_states)

@@ -16,7 +16,7 @@ def nfa_to_dfa(nfa):
         if any(s in nfa.accept_states for s in current_state):
             dfa_accept_states.append(current_state)
 
-        for symbol in nfa.alphabet:
+        for symbol in nfa.language:
             next_state_set = nfa.epsilon_closure(nfa.move(current_state, symbol))
             next_state = tuple(sorted(next_state_set))
 
@@ -31,8 +31,8 @@ def nfa_to_dfa(nfa):
                 dfa_transitions[(current_state, symbol)] = dead_state
                 if dead_state not in dfa_states:
                     dfa_states.append(dead_state)
-                    for sym in nfa.alphabet:
+                    for sym in nfa.language:
                         dfa_transitions[(dead_state, sym)] = dead_state
 
 
-    return DFA(dfa_states, nfa.alphabet, dfa_transitions, dfa_start_state, dfa_accept_states)
+    return DFA(dfa_states, nfa.language, dfa_transitions, dfa_start_state, dfa_accept_states)
