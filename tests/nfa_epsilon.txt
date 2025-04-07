@@ -1,0 +1,10 @@
+states: A,B,C,D,E
+alphabet: 0,1
+start_state: A
+accept_states: E
+transitions:
+A,,B
+A,,C
+B,0,D
+C,1,D
+D,,E
