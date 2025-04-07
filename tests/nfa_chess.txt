@@ -1,0 +1,21 @@
+states: 1,2,3,4,5,6,7,8,9
+alphabet: r,b
+start_state: 1
+accept_states: 5
+transitions:
+1,r,2
+1,r,4
+2,b,5
+4,b,5
+2,r,4
+4,r,6
+3,r,2
+3,b,6
+6,b,5
+6,r,8
+8,r,5
+8,b,7
+7,b,5
+7,r,9
+9,b,5
+9,r,8

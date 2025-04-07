@@ -1,9 +1,12 @@
-states: s0,s1,s2,s3
-alphabet: 0,1
-start_state: s0
-accept_states: s3
+states: 1,2,3,4,5
+alphabet: a,b
+start_state: 1
+accept_states: 5
 transitions:
-s0,0,s0
-s0,0,s1
-s1,1,s2
-s2,1,s3
+1,,2
+1,a,3
+2,a,5
+2,a,4
+3,b,4
+4,a,5
+4,b,5

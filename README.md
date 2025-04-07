@@ -24,3 +24,7 @@ Talk about how to use the project here
 
 ## Sources
 Place any references here
+
+## Running code
+python main.py tests/"name of file"
+python main.py tests/"name of file" --graph
