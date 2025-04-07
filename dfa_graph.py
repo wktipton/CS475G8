@@ -6,7 +6,7 @@ def rename_states(dfa):
 def print_dfa_readable(dfa):
     state_names = rename_states(dfa)
 
-    print("\nPretty DFA Output:")
+    # print("\nPretty DFA Output:")
     print("States:")
     for state in dfa.states:
         print(f"  {state_names[state]} = {state}")
