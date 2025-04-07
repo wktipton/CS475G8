@@ -1,0 +1,9 @@
+states: s0,s1,s2,s3
+alphabet: 0,1
+start_state: s0
+accept_states: s3
+transitions:
+s0,0,s0
+s0,0,s1
+s1,1,s2
+s2,1,s3
