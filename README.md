@@ -1,4 +1,7 @@
 # CS475-001 Group 8 Subset Construction Final Project
+**Python Version:** 3.12.3
+
+**Group Members:** </br>
 Daniel Tsark - dhtsark@crimson.ua.edu </br>
 Will Tipton - wktipton@crimson.ua.edu </br>
 Noah Morgans - nmorgans@crimson.ua.edu </br>
@@ -20,7 +23,6 @@ Discuss the methods for solving the problem here
 Talk about the results of the project here
 
 ## How To Use
-Talk about how to use the project here
 
 ## Sources
 Place any references here
