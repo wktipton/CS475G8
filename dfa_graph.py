@@ -22,23 +22,3 @@ def print_dfa_readable(dfa):
     for (src, symbol), dst in dfa.transitions.items():
         print(f"  {state_names[src]} -- {symbol} --> {state_names[dst]}")
     print()
-
-'''
-def draw_dfa(dfa, filename='dfa_output'):
-    from graphviz import Digraph
-    dot = Digraph(comment='DFA')
-    state_names = rename_states(dfa)
-
-    for state in dfa.states:
-        shape = 'doublecircle' if state in dfa.accept_states else 'circle'
-        dot.node(state_names[state], shape=shape)
-
-    # Start arrow
-    dot.node('', '', shape='none')
-    dot.edge('', state_names[dfa.start_state])
-
-    for (src, symbol), dst in dfa.transitions.items():
-        dot.edge(state_names[src], state_names[dst], label=symbol)
-
-    dot.render(filename, view=True, format='pdf')
-'''
