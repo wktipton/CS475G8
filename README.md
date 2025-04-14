@@ -23,6 +23,7 @@ Discuss the methods for solving the problem here
 Talk about the results of the project here
 
 ## How To Use
+Explain how to use the program here
 
 ## Sources
 Place any references here
