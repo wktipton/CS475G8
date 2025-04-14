@@ -10,14 +10,6 @@ args = parser.parse_args()
 
 nfa = load_nfa_from_file(args.input_file)
 dfa = nfa_to_dfa(nfa)
-
-'''
-print("DFA States:", dfa.states)
-print("DFA Transitions:", dfa.transitions)
-print("DFA Start State:", dfa.start_state)
-print("DFA Accept States:", dfa.accept_states)
-'''
-
 print_dfa_readable(dfa)
 
 '''
