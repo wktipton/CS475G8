@@ -55,7 +55,7 @@ q2,1,q3
 
 Once you have created the input NFA, you can run the program using the command ```make <NFA_filename>.txt```. Ensure that this file is located within the ```tests``` folder. If you want to check if your NFA file is located in the ```tests``` folder, you can use the ```make list``` command to list all of the .txt files within ```tests```.
 
-If the program runs successfully, it should output the following text, which is the resulting DFA:
+If the program runs successfully, it should output something similar to the following text, which is the resulting DFA:
 
 ```
 python3 main.py tests/<NFA_filename>.txt
