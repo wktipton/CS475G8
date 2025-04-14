@@ -31,14 +31,4 @@ def load_nfa_from_file(filename):
                 transitions[key] = []
             transitions[key].append(to_state.strip())
 
-    '''
-    print("DEBUG - Parsed NFA:")
-    print("States:", states)
-    print("Alphabet:", language)
-    print("Start state:", start_state)
-    print("Accept states:", accept_states)
-    print("Transitions:", transitions)
-    '''
-
-
     return NFA(states, language, transitions, start_state, accept_states)
