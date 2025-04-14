@@ -1,3 +1,7 @@
+'''
+This program defines a class for a Deterministic Finite Automaton (DFA).
+'''
+
 class DFA:
     def __init__(self, states, language, transitions, start_state, accept_states):
         self.states = states
