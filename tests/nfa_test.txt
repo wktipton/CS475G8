@@ -1,7 +1,11 @@
 states: 1,2,3,4,5
+
 language: a,b
+
 start_state: 1
+
 accept_states: 5
+
 transitions:
 1,,2
 1,a,3

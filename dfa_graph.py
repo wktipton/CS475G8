@@ -23,6 +23,7 @@ def print_dfa_readable(dfa):
         print(f"  {state_names[src]} -- {symbol} --> {state_names[dst]}")
     print()
 
+'''
 def draw_dfa(dfa, filename='dfa_output'):
     from graphviz import Digraph
     dot = Digraph(comment='DFA')
@@ -40,3 +41,4 @@ def draw_dfa(dfa, filename='dfa_output'):
         dot.edge(state_names[src], state_names[dst], label=symbol)
 
     dot.render(filename, view=True, format='pdf')
+'''
