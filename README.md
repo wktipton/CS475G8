@@ -57,7 +57,7 @@ Once you have created the input NFA, you can run the program using the command `
 
 If the program runs successfully, it should output the following text, which is the resulting DFA:
 
-``` python
+```
 python3 main.py tests/<NFA_filename>.txt
 States:
   S0 = ('q0', 'q1')
