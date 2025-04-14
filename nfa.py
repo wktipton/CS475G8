@@ -24,4 +24,3 @@ class NFA:
             for next_state in self.transitions.get((state, symbol), []):
                 reachable_states.add(next_state)
         return reachable_states
-

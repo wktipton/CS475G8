@@ -5,7 +5,6 @@ def nfa_to_dfa(nfa):
     dfa_states = []
     dfa_transitions = {}
     dfa_start_state = tuple(sorted(nfa.epsilon_closure({nfa.start_state})))
-    # print("Start ε-closure:", dfa_start_state)
     dfa_accept_states = []
     unmarked_states = [dfa_start_state]
     dfa_states.append(dfa_start_state)
