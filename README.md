@@ -19,9 +19,9 @@ Some real world applications of this process include:
 ## Implementation
 A three-step algorithm is used to convert a provided NFA into a DFA. In the first step, the algorithm lists all possible subsets of the NFA and finds all of the possible transitions on each input symbol. When handling any $\epsilon$-transitions in the provided NFA, the algorithm uses the $\epsilon$-closure of the state as its transition. During this step, if the algorithm encounters a subset that includes a final state, it marks the subset as a final state for the DFA.
 
-The second step of the algorithm handles the removal of unreachable states. It achieves this through the [insert file name] program, which [explain how file works]. This ensures that only reachable states are used for the DFA.
+The second step of the algorithm handles the removal of unreachable states. It achieves this through the ***[insert file name]*** program, which ***[explain how file works]***. This ensures that only reachable states are used for the DFA.
 
-The third and final step of the algorithm is to finally create the DFA using the gathered state information and transition table. [Talk more in-depth about the file(s) that handle this].
+The third and final step of the algorithm is to finally create the DFA using the gathered state information and transition table. ***[Talk more in-depth about the file(s) that handle this]***.
 
 ## How To Use
 This program contains a makefile for better user accessibility. Running the command ```make``` in the terminal will provide you with the necessary information to run the program.
