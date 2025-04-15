@@ -22,17 +22,16 @@ A three-step algorithm is used to convert a provided NFA into a DFA. The program
 In the first step, the algorithm reads through the provided NFA and determines all possible subsets of the NFA. It also determines all of the possible transitions on each letter from the alphabet. When the program encounters an $\epsilon$-transition in the provided NFA, the program runs the $\epsilon$-closure function in ```nfa.py``` listed below:
 
 ``` python
-    def epsilon_closure(self, states):
-        closure = set(states)
-        stack = list(states)
-
-        while stack:
-            state = stack.pop()
-            for next_state in self.transitions.get((state, ''), []):
-                if next_state not in closure:
-                    closure.add(next_state)
-                    stack.append(next_state)
-        return closure
+def epsilon_closure(self, states):
+  closure = set(states)
+  stack = list(states)
+  while stack:
+    state = stack.pop()
+    for next_state in self.transitions.get((state, ''), []):
+      if next_state not in closure:
+          closure.add(next_state)
+          stack.append(next_state)
+return closure
 ```
 
 Furthermore, if the algorithm encounters a subset that includes an accepting state from the provided NFA, it marks the subset as accepting for the DFA.
@@ -41,11 +40,11 @@ The second step of the algorithm handles the removal of unreachable states. It a
 
 ``` python
 def move(self, states, symbol):
-        reachable_states = set()
-        for state in states:
-            for next_state in self.transitions.get((state, symbol), []):
-                reachable_states.add(next_state)
-        return reachable_states
+  reachable_states = set()
+  for state in states:
+    for next_state in self.transitions.get((state, symbol), []):
+      reachable_states.add(next_state)
+return reachable_states
 ```
 
 As we can see from the function above, the program uses a depth-first search to traverse through the NFA to ensure that the state is reachable. If we combine this function with the $\epsilon$-closure function, we can ensure that only reachable states are represented in the resulting DFA.
