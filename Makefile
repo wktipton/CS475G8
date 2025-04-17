@@ -15,4 +15,4 @@ help:
 # List tests manually
 list:
 	@echo "Available tests:"
-	ls tests/*.txt | xargs -n 1 basename
+	@ls tests/*.txt | xargs -n 1 basename
